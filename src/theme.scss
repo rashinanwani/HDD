@@ -1,0 +1,76 @@
+// @import 'assets/matfonts/material-icons.css';
+// $material-icons-font-path: "~material-icons/iconfont/";
+
+// @import "~material-icons/iconfont/material-icons.scss";
+@import '~@angular/material/theming';
+//@include mat-core();
+ // background-color: #212121;
+ @include mat-core();
+ $md-DarkPrimary: (
+   50: #e7e7e7,
+   100: #c2c2c2,
+   200: #999999,
+   300: #707070,
+   400: #525252,
+   500: #333333,
+   600: #2e2e2e,
+   800: #202020,
+   900: #141414,
+   A100: #ef6e6e,
+   A200: #ea4040,
+   A400: #f60000,
+   A700: #dd0000,
+   contrast: (
+     50: #000000,
+     100: #000000,
+     200: #000000,
+     300: #ffffff,
+     400: #ffffff,
+     500: #ffffff,
+     600: #ffffff,
+     700: #ffffff,
+     800: #ffffff,
+     900: #ffffff,
+     A100: #000000,
+     A200: #ffffff,
+     A400: #ffffff,
+     A700: #ffffff
+   )
+ );
+
+$my-app-primary: mat-palette($mat-green);
+$my-app-accent:  mat-palette($mat-yellow);
+$my-app-warn:    mat-palette($mat-red,400);
+
+// $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$warn: map-get($my-app-theme, warn);
+// button { background-color: mat-color($warn);}    
+// $primary: map-get($my-app-theme, primary);table {  background-color:mat-color($primary) !important ;}
+$accent: map-get($my-app-theme, accent);
+$primary: map-get($my-app-theme, primary);
+// $primary: map-get($my-app-theme, primary);
+// .table{background-color: mat-color($primary);}
+
+// @mixin candy-carousel-theme($my-app-theme) {
+//     // Extract the palettes you need from the theme definition.
+//     $primary: map-get($my-app-theme, primary);
+//     $accent: map-get($my-app-theme, accent);
+  
+//     // Define any styles affected by the theme.
+//     .candy-carousel {
+//       // Use mat-color to extract individual colors from a palette.
+//       background-color:'$my-app-accent';
+//     //   background-color: mat-color($primary);
+//       border-color: mat-color($accent, A400);
+//     }
+//   }
+
+// .div{
+//     border: 2px solid black;
+//       border-radius: 50%;
+//       padding: 2px;
+//       display: inline-table;
+//   }
+@include angular-material-theme($my-app-theme);
+// @include candy-carousel-theme($my-app-theme);

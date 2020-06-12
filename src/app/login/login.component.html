@@ -1,0 +1,36 @@
+<div class="LoginDiv">
+    <div class="center-screen">
+        <div class="login-container">
+            <h1
+                style="width: 100%;border-bottom: 1px solid ;padding-bottom: 5px;margin-top: 10px; color:primary;">
+                Log In</h1>
+
+            <form name="form" (ngSubmit)="validate() && f.form.valid && login()" #f="ngForm" novalidate class="flexC">
+
+                <mat-form-field matTooltip="Enter User Id">
+                    <input type="text" matInput name="username" autocomplete="off" [(ngModel)]="user.AssociateID"
+                           required placeholder="Enter User Id" autofocus
+                        oninput="validity.valid||(value='');" required />
+                </mat-form-field>
+
+                <mat-form-field matTooltip="Enter User Password">
+                    <input matInput type="password" name="password" autocomplete="off" [(ngModel)]="user.password"
+                        #password="ngModel" placeholder="Enter User Password" required />
+                </mat-form-field>
+
+                <div style="padding-top: 15px;">
+                    <div style="float:right;">
+                        <button mat-raised-button color="primary" [routerLink]="['/Dashboard']"[disabled]="loading" type="submit">Login</button>
+                    </div>
+                    <div style="float:left;">
+                        <!-- <button mat-raised-button  -->
+                        <label color="primary" [routerLink]="['/Register']" class="register">Register</label>
+                    </div>
+                </div>
+            </form>
+            <br />
+
+        </div>
+    </div>
+</div>
+ 
