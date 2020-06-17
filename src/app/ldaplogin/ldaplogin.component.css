@@ -1,0 +1,80 @@
+.LoginDiv {
+    background-image: url("~/assets/images/Cognizant_background_iPAD.jpg");
+    background-repeat: no-repeat;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover; 
+  }
+  .register{
+    cursor:pointer;
+    height:20px
+  }
+  .center-screen {
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    /* -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column; */
+    flex-direction: column;
+    /*justify-content: center;*/
+    /* -webkit-box-align: center;
+    -ms-flex-align: center; */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  
+  
+  /* header {
+      background-color: #202731;
+      color: #C5C6C8;
+      display: block;
+      padding: 1.5em;
+      text-align: center;
+    } */
+ 
+  
+  .login-container {
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    /* -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column; */
+    flex-direction: column;
+    /* -webkit-box-align: center;
+    -ms-flex-align: center; */
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: auto;
+    padding: 5px;
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    /* -ms-flex-item-align: center; */
+    align-self: center;
+    background: white;
+    max-width: 400px;
+    background-color: rgba(192, 192, 199, 0.7);
+    /* -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .mat-icon {
+    vertical-align: middle;
+    padding: 4px 10px 0 0;
+  }
+   
+
+  .form-group {
+    line-height: 45px;
+  }
+  .flexC{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }

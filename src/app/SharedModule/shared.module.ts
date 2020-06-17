@@ -14,13 +14,14 @@ import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule, MatProgressBarModule, MatProgressSpinnerModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
     providers: [],
     declarations: [],
     exports: [
-        FormsModule,
+    FormsModule,
     CommonModule,
     BrowserModule,
     HttpClientModule,
@@ -42,31 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatDividerModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatIconModule
     ],
-    // imports: [
-    // FormsModule,
-    // CommonModule,
-    // BrowserModule,
-    // HttpClientModule,
-    // MatTableModule,
-    // MatCheckboxModule,
-    // MatPaginatorModule,
-    // MatFormFieldModule,
-    // MatInputModule,
-    // MatSelectModule,
-    // BrowserModule,
-    // BrowserAnimationsModule,
-    // MatFormFieldModule,
-    // FormsModule,
-    // ReactiveFormsModule,
-    // MatPaginatorModule,
-    // MatDatepickerModule,
-    // MatNativeDateModule,
-    // MatProgressBarModule,
-    // MatDividerModule,
-    // MatProgressSpinnerModule,
-    // MatSnackBarModule,
-    // ],
-
 })
 export class SharedModule { }

@@ -39,22 +39,20 @@ table {
 
 #head_p{
     font-weight: 900;
-    color:#000000;
+    color:#367c2b;;
     margin:0 10px 0 10px;
     /*margin-right: 50%;*/
     width:75%;
-    font-size: 28px
+    height:auto;
+    font-size: 28px;
 }
 
-#head_p p{
-  float:right;
-}
 
-#head_img{
+#head_icon{
       /*margin-left: 25%;*/
       width:25%;
       height:auto;
-      /*margin: 15px;*/
+      margin:0 10px 0 10px;
       position:relative;
 }
 
@@ -71,7 +69,7 @@ font-weight: 100;
 }
 
 button{
-    color: #367c2b;
+    color:#367c2b; 
     border: 2px solid #367c2b;
     background: 0 0;
     font-size: 20px;

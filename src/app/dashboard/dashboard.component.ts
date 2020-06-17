@@ -16,7 +16,7 @@ import { BkupData } from '../Model/BkupData';
 import { A0rgData } from '../Model/A0rgData';
 import { MessageService } from '../services/message.service';
 
-// declare var require: any;
+declare var require: any;
 let Highcharts3D = require('highcharts/highcharts-3d');
 // let HighchartsStock = require('highcharts/modules/stock.js');
 Highcharts3D(Highcharts);
