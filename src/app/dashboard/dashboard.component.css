@@ -38,21 +38,22 @@ table {
 }
 
 #head_p{
-    font-weight: 900;
+    /* font-weight:800; */
     color:#367c2b;;
-    margin:0 10px 0 10px;
+    margin:0px;
     /*margin-right: 50%;*/
-    width:75%;
-    height:auto;
-    font-size: 28px;
+    /* width:55%; 
+    height:auto; 
+    font-size: 30px; */
 }
 
 
 #head_icon{
-      /*margin-left: 25%;*/
-      width:25%;
+      /* margin-left: 55%; */
+      /* width:45%; */
+      float:right;
       height:auto;
-      margin:0 10px 0 10px;
+      margin:0 0 0 920px;
       position:relative;
 }
 

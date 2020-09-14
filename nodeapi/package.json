@@ -12,10 +12,12 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.3",
-    "sequelize": "^5.21.7",
-    "tedious": "^8.3.0"
+    "mssql": "^6.2.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
+    "sequelize": "^5.22.3",
+    "tedious": "^8.3.1"
   }
 }

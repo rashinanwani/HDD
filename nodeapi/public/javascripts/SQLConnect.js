@@ -166,7 +166,7 @@ module.exports = {
     let data = [];
 
     return new Promise((resolve, rej) => {
-      request = new Request("use HDDServer;SELECT [ServerName],[TStamp],[ServerSize] FROM [dbo].[" + sname + "GraphData]", function (err, rowCount) {
+      request = new Request("use HDDServer;SELECT [ServerName],[TStamp],[ServerSize] FROM [dbo].[" + sname + "GraphData] ORDER BY [TStamp]", function (err, rowCount) {
         if (err) {
           // console.log(err);
           //data.push({ Type: 'Line_Graph_Data_Err', Error: 'Error', Message: err.message, Code: err.code, ServerName: err.serverName })
@@ -234,7 +234,7 @@ module.exports = {
         }
       });
       request.on('row', (column) => {
-        data.push({ Name: column[0].value, CreationTime: column[1].value.toLocaleDateString(), Mostrecentaccess: column[2].value.toLocaleDateString(), Mostrecentmodification: column[3].value.toLocaleDateString(), SizeInBytes: column[4].value })
+        data.push({ Name: column[0].value, CreationTime: column[1].value.toLocaleDateString(), Mostrecentaccess: column[2].value.toLocaleDateString(), Mostrecentmodification: column[3].value.toLocaleDateString(), SizeInBytes: column[4].value, FilePath: column[5].value })
       })
 
       request.on('requestCompleted', function (columns) {
