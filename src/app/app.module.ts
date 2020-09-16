@@ -5,22 +5,8 @@ import { GetDataServiceService } from './services/get-data-service.service';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from './SharedModule/shared.module';
-import {
-  OKTA_CONFIG,
-  OktaAuthModule,
-  OktaAuthService
-} from '@okta/okta-angular';
-import {OktaCallbackComponent,OktaLoginRedirectComponent,OktaAuthGuard} from '@okta/okta-angular';
+import { OKTA_CONFIG, OktaAuthService } from '@okta/okta-angular';
 import { LDAPLoginComponent } from './ldaplogin/ldaplogin.component';
-
- 
-export function onAuthRequired(oktaAuth, injector) {
-  // Use injector to access any service available within your application
-  const router = injector.get(Router);
- 
-  // Redirect the user to your custom login page
-  router.navigate(['/Login']);
-}
 
 const oktaConfig = {
   issuer: 'https://dev-656972.okta.com/oauth2/ausfljdssZHbEjn8H4x6',
@@ -38,7 +24,6 @@ const oktaConfig = {
   ],
   imports: [
     SharedModule,
-    OktaAuthModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'Login', pathMatch: 'full' },
       { path: 'Login', component: LoginComponent },
@@ -48,16 +33,11 @@ const oktaConfig = {
         path: 'implicit/callback',
         component: DashboardComponent
       },
-    //OktaAuthModule.initAuth(config),
   ]),
     // { preloadingStrategy: PreloadAllModules }),
   ],
   providers: [GetDataServiceService,OktaAuthService,
     { provide: OKTA_CONFIG, useValue: oktaConfig }],
-  exports:[
-    LoginComponent,
-    DashboardComponent
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

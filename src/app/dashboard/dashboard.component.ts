@@ -15,6 +15,7 @@ import { DplymntData } from '../Model/DplymntData';
 import { BkupData } from '../Model/BkupData';
 import { A0rgData } from '../Model/A0rgData';
 import { MessageService } from '../services/message.service';
+import { LoginComponent } from '../login/login.component';
 
 declare var require: any;
 let Highcharts3D = require('highcharts/highcharts-3d');
@@ -182,7 +183,7 @@ export class DashboardComponent implements OnInit {
       }
     },
       err => {
-        this._MessageService.openSnackBar({ message: 'Prediction Data Not Found', Action: 'Close', Class: "error" });
+        // this._MessageService.openSnackBar({ message: 'Prediction Data Not Found', Action: 'Close', Class: "error" });
       }
     );
   }
